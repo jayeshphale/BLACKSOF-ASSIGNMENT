@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DeJoule Assignment
 
-## Getting Started
+A modern landing page for DeJoule’s smart building operations platform, built as a Next.js 16 app-router site.
 
-First, run the development server:
+The page showcases an AFDD-powered smart alerts experience for facilities management, with:
+- personalized operational alerts
+- real-time analytics and monitoring
+- intelligent automation and control
+- a polished marketing-style UI with motion and responsive layout
+
+## Project Overview
+
+This repository contains a landing page demo built around the DeJoule brand and product messaging.
+
+Key sections:
+- `Hero` — headline, smart alert cards, and phone visual
+- `Alerts Redefined` — role-based alerts, root-cause analysis, and actionable solutions
+- `Feature Showcase` — analytics, alerts, monitoring, and automation
+- `Connect CTA` — contact invitation for building performance
+- `Site Footer`
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- GSAP
+- Lenis
+- Lucide React
+
+## Scripts
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Build for production:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Start the production server:
 
-## Learn More
+```bash
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run linting:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run lint
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Repository Structure
 
-## Deploy on Vercel
+- `app/` — main Next.js app router files and global styles
+- `components/` — reusable UI sections and motion components
+- `lib/` — content constants, design tokens, and motion utilities
+- `public/` — static assets and images
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- The page uses custom copy and branding for DeJoule, including smart alert workflows and facility monitoring.
+- The project entrypoint is `app/page.tsx`, which composes the homepage sections.
+- Assets are stored under `public/images` and referenced by the page components.
