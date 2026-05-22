@@ -1,11 +1,14 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
 
 :root {
   --background: #f9fafb;
-  --foreground: #111827;
-  --dejoule-brand: #e54d2e;
-  --dejoule-brand-dark: #ca3604;
-  --dejoule-headline: #111827;
+  --foreground: #000000;
+  --dejoule-brand: #ca3604;
+  --dejoule-brand-light: #e54d2e;
+  --dejoule-headline: #000000;
   --dejoule-nav: #4b5563;
   --dejoule-muted: #6b7280;
 }
@@ -14,16 +17,11 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-dejoule-brand: var(--dejoule-brand);
-  --color-dejoule-brand-dark: var(--dejoule-brand-dark);
+  --color-dejoule-brand-light: var(--dejoule-brand-light);
   --color-dejoule-headline: var(--dejoule-headline);
   --color-dejoule-nav: var(--dejoule-nav);
   --color-dejoule-muted: var(--dejoule-muted);
-  --font-sans: var(--font-inter);
-  --font-display: var(--font-plus-jakarta);
-}
-
-html {
-  scroll-behavior: smooth;
+  --font-sans: var(--font-worksans);
 }
 
 html.lenis,
@@ -35,19 +33,35 @@ html.lenis body {
   scroll-behavior: auto !important;
 }
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", sans-serif;
+  font-family: var(--font-worksans), "Work Sans", system-ui, sans-serif;
 }
 
-.font-display {
-  font-family: var(--font-plus-jakarta), var(--font-inter), sans-serif;
+/* GSAP pin-spacers must stay light — transparent spacers read as black during scroll */
+.pin-spacer {
+  background-color: #f9fafb;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.mask-b-from-90 {
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+.container-content {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

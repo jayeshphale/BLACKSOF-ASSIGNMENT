@@ -18,7 +18,7 @@ export function FooterBrand() {
         transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
       >
         <Image
-          src="/logo.svg"
+          src="/assets/global/logo.svg"
           alt="DeJoule"
           width={176}
           height={65}

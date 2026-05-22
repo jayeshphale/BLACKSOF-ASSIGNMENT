@@ -1,25 +1,20 @@
 import type { Metadata } from "next";
-import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteProviders } from "@/components/providers/SiteProviders";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const workSans = Work_Sans({
+  variable: "--font-worksans",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "DeJoule | AFDD powered by Smart Alerts",
+  title: "DeJoule | Intelligent Building Management System",
   description:
-    "Making alerts relevant, personalized, and directly actionable for your operations team.",
+    "Not just another building management system, but a 24x7 ally for peak building efficiency.",
 };
 
 export default function RootLayout({
@@ -28,11 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${plusJakarta.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-[#F9FAFB] text-[#111827]">
+    <html lang="en" className={`${workSans.variable} h-full`}>
+      <body className="min-h-full bg-[#F9FAFB] font-sans text-black antialiased">
         <SiteProviders>
           <SiteHeader />
           {children}

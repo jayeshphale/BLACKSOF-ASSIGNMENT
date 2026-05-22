@@ -1,76 +1,39 @@
-# DeJoule Assignment
+# DeJoule AI — Pixel Clone (Assignment)
 
-A modern landing page for DeJoule’s smart building operations platform, built as a Next.js 16 app-router site.
+Near pixel-accurate rebuild of [dejoule.ai](https://dejoule.ai/) and [dejoule.ai/smart-alerts](https://dejoule.ai/smart-alerts) using Next.js, Tailwind CSS, GSAP ScrollTrigger, Lenis, Swiper, and Framer Motion.
 
-The page showcases an AFDD-powered smart alerts experience for facilities management, with:
-- personalized operational alerts
-- real-time analytics and monitoring
-- intelligent automation and control
-- a polished marketing-style UI with motion and responsive layout
-
-## Project Overview
-
-This repository contains a landing page demo built around the DeJoule brand and product messaging.
-
-Key sections:
-- `Hero` — headline, smart alert cards, and phone visual
-- `Alerts Redefined` — role-based alerts, root-cause analysis, and actionable solutions
-- `Feature Showcase` — analytics, alerts, monitoring, and automation
-- `Connect CTA` — contact invitation for building performance
-- `Site Footer`
-
-## Tech Stack
-
-- Next.js 16
-- React 19
-- TypeScript
-- Tailwind CSS v4
-- Framer Motion
-- GSAP
-- Lenis
-- Lucide React
-
-## Scripts
-
-Install dependencies:
+## Quick start
 
 ```bash
 npm install
-```
-
-Run the development server:
-
-```bash
 npm run dev
 ```
 
-Build for production:
+- Homepage: http://localhost:3000
+- Smart Alerts: http://localhost:3000/smart-alerts
 
 ```bash
 npm run build
+npm start
 ```
 
-Start the production server:
+## Key implementation
 
-```bash
-npm run start
-```
+| Area | Approach |
+|------|----------|
+| Typography | Work Sans (matches production site) |
+| Smooth scroll | Lenis + `ScrollTrigger.scrollerProxy` |
+| Smart Alerts hero | Full-viewport section, official `bgImage.png`, scrubbed floating cards |
+| Sticky storytelling | GSAP `pin` + `scrub` timeline — left nav/steps change while phone mockup stays pinned |
+| AFDD carousel | Swiper.js issue cards with official WebP assets |
+| Assets | Downloaded from `dejoule.ai/assets/...` into `public/assets/` |
 
-Run linting:
+## Routes
 
-```bash
-npm run lint
-```
+- `/` — Homepage (hero + feature stack + alerts carousel + CTA)
+- `/smart-alerts` — Full Smart Alerts page with sticky scroll storytelling
 
-## Repository Structure
+## Deliverables
 
-- `app/` — main Next.js app router files and global styles
-- `components/` — reusable UI sections and motion components
-- `lib/` — content constants, design tokens, and motion utilities
-- `public/` — static assets and images
-
-## Notes
-
-- The page uses custom copy and branding for DeJoule, including smart alert workflows and facility monitoring.
-- The project entrypoint is `app/page.tsx`, which composes the homepage sections.
-- Assets are stored under `public/images` and referenced by the page components.
+- `dejoule-assignment-final.zip` — source snapshot (excludes `node_modules`, `.next`)
+- `deliverables/screenshots/` — desktop capture references
